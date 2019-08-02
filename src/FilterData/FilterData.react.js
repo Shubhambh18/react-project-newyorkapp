@@ -3,18 +3,20 @@ import React from 'react';
 const FilterData = (props) => {
   
   
-    
+    // let flag=0;
+    if(Date.parse(props.inputsToFilter.to_date) < Date.parse(props.inputsToFilter.from_date))
+    {
+       return(
+           <h1> Invalid Date</h1>
+       )
+    }
+    else{
     return (
+       
         props.posts.map(
+           
             p => {
-                if (Date.parse(props.inputsToFilter.to_date) < Date.parse(props.inputsToFilter.from_date)) {
-                   
-                    return (
-                        <div>
-                            <h2>Invalid Date</h2>
-                        </div>
-                    )
-                } else if((props.inputsToFilter.to_date)===''||(props.inputsToFilter.from_date)==='')
+                 if((props.inputsToFilter.to_date)===''||(props.inputsToFilter.from_date)==='')
                 {
                     return (
                         <div key={p.web_url} className='alignment'>
@@ -45,6 +47,8 @@ const FilterData = (props) => {
                 }
             }
         ));
+    }
+
 
 }
 
