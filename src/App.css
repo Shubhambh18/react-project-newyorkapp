@@ -1,0 +1,23 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+.App {
+  text-align: center;
+}
+hr.style1{
+	border-top: 5px solid #000000;
+}
+
+.content{
+  font-weight: bold;
+}
+
+.input{
+  margin-right:10px
+}
+
+.alignment{
+  text-align:left
+}
+
+
+
